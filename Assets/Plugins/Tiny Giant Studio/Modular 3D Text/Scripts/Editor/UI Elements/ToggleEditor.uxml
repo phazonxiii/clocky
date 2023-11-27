@@ -1,0 +1,18 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <ui:Template name="ThemeSwitcher" src="project://database/Assets/Plugins/Tiny%20Giant%20Studio/Modular%203D%20Text/Scripts/Editor/Common/UITemplates/ThemeSwitcher.uxml?fileID=9197481963319205126&amp;guid=dcb2a8406bd7c26499a68e30bea7b554&amp;type=3#ThemeSwitcher" />
+    <Style src="project://database/Assets/Plugins/Tiny%20Giant%20Studio/Modular%203D%20Text/Scripts/Editor/Common/ModularTextStyleSheet.uss?fileID=7433441132597879392&amp;guid=bc57b45100516604c92a14e686605401&amp;type=3#ModularTextStyleSheet" />
+    <ui:GroupBox name="RootHolder" style="margin-left: -15px; margin-right: -6px; margin-top: 0; margin-bottom: -10px; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; background-image: url(&apos;project://database/Assets/Plugins/Tiny%20Giant%20Studio/Common/Artworks/Background%20Gradient.png?fileID=2800000&amp;guid=8033da248a8acbb46b516119a4edfaf7&amp;type=3#Background Gradient&apos;); -unity-background-image-tint-color: rgb(49, 48, 48);">
+        <ui:GroupBox name="Content" style="margin-right: 10px; margin-left: 10px; margin-top: 10px; margin-bottom: 10px;">
+            <ui:Toggle label="Is On " binding-path="_isOn" name="IsOnToggle" class="toggleThemeSupported" style="margin-left: 5px; margin-bottom: 10px;" />
+            <ui:Foldout text="On state" view-data-key="onStateFoldout" value="true" class="layoutBox" style="max-width: none; min-width: auto; margin-left: 0; margin-right: 0; margin-top: 2px; margin-bottom: 2px;">
+                <uie:ObjectField label="Graphic" type="UnityEngine.GameObject, UnityEngine.CoreModule" binding-path="onGraphic" name="GraphicsOnObjectField" />
+                <uie:PropertyField binding-path="onEvent" style="margin-left: 10px; margin-top: 5px;" />
+            </ui:Foldout>
+            <ui:Foldout text="Off state" view-data-key="offStateFoldout" value="false" class="layoutBox" style="max-width: none; min-width: auto; margin-right: 0; margin-left: 0; margin-top: 2px; margin-bottom: 0;">
+                <uie:ObjectField label="Graphic" type="UnityEngine.GameObject, UnityEngine.CoreModule" binding-path="offGraphic" name="GraphicsOffObjectField" />
+                <uie:PropertyField binding-path="offEvent" style="margin-left: 10px; margin-top: 5px;" />
+            </ui:Foldout>
+        </ui:GroupBox>
+        <ui:Instance template="ThemeSwitcher" name="ThemeSwitcher" style="position: absolute; left: auto; right: 20px; top: 10px;" />
+    </ui:GroupBox>
+</ui:UXML>
